@@ -50,7 +50,7 @@ public class TakeInput implements Command{
         columns = Integer.parseInt(input[1]);
 
         //x <= y < 1000 CONSTRAINT
-        if(rows <= columns || columns < 1000){
+        if(rows > columns || columns > 1000){
             throw new IllegalArgumentException("Invalid grid size!");
         }
     }
