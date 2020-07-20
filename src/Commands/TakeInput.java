@@ -48,6 +48,11 @@ public class TakeInput implements Command{
         String[] input = sc.nextLine().split(", ");
         rows = Integer.parseInt(input[0]);
         columns = Integer.parseInt(input[1]);
+
+        //x <= y < 1000 CONSTRAINT
+        if(rows <= columns || columns < 1000){
+            throw new IllegalArgumentException("Invalid grid size!");
+        }
     }
 
     /**
